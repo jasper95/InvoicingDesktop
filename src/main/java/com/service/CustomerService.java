@@ -6,6 +6,7 @@
 package com.service;
 
 import com.domain.Customer;
+import java.util.List;
 
 /**
  *
@@ -13,4 +14,6 @@ import com.domain.Customer;
  */
 public interface CustomerService {
     public Customer find(Integer id);
+    public List<Customer> findAll();
+    public void saveForm(Customer c);
 }

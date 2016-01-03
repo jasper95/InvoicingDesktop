@@ -18,7 +18,9 @@ public class InvoicingMain {
     public static void main(String[] args){
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         CustomerService service = (CustomerService) context.getBean("customerService");
-        Customer cust = service.find(1);
-        System.out.println(" "+cust.getFirstName());
+        for(Customer c : service.findAll())
+            System.out.println(c.getFirstName());
+        //Customer cust = service.find(1);
+        //System.out.println(" "+cust.getFirstName());
     }
 }
